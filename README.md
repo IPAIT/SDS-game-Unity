@@ -1,2 +1,2 @@
 # SDS-game-Unity
-Hello parni
+Hello parniya nadeus chto rabotaet
