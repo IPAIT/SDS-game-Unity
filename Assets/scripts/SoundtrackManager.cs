@@ -47,7 +47,7 @@ public class SoundtrackManager : MonoBehaviour
     {
         // Увеличиваем индекс и переходим к следующему треку (цикл)
         currentTrackIndex = (currentTrackIndex + 1) % tracks.Length;
-
+        Debug.Log("Button clicked");
         // Воспроизводим следующий трек
         PlayTrack(currentTrackIndex);
     }
