@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     public float interactDistance = 3f;
 
     private bool hasKey = false;
+    private bool gateOpened = false;
 
     void Update()
     {
@@ -24,15 +25,19 @@ public class PlayerInteraction : MonoBehaviour
                     hasKey = true;
                     Debug.Log("Ключ подобран");
                 }
-                else if (hit.collider.CompareTag("Gate") && hasKey)
+                else if (hit.collider.CompareTag("Gate"))
                 {
-                    // Открытие ворот
-                    gateAnimator.SetBool("isOpen", true);
-                    Debug.Log("Ворота открываются");
-                }
-                else if (hit.collider.CompareTag("Gate") && !hasKey)
-                {
-                    Debug.Log("Нужен ключ, чтобы открыть ворота");
+                    if (hasKey && !gateOpened)
+                    {
+                        // Открытие ворот
+                        gateAnimator.SetBool("isOpen", true);
+                        gateOpened = true;
+                        Debug.Log("Ворота открываются");
+                    }
+                    else if (!hasKey)
+                    {
+                        Debug.Log("Нужен ключ, чтобы открыть ворота");
+                    }
                 }
             }
         }

@@ -1467,8 +1467,35 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6423585, y: 1.2011836, z: 0.4304358}
-  m_Center: {x: 0.3076016, y: 0.004674307, z: 0.04136625}
+  m_Size: {x: 0.6691298, y: 0.36353564, z: 0.1330662}
+  m_Center: {x: 0.29421717, y: -0.10908035, z: 0.010441655}
+--- !u!54 &1479925171
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479925161}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1521159270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d61f7cbe136016343885013c418977ff, type: 3}
@@ -1536,6 +1563,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c98851c52325bc741b87285304b52c24, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c98851c52325bc741b87285304b52c24, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c98851c52325bc741b87285304b52c24, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c98851c52325bc741b87285304b52c24, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.3394785
       objectReference: {fileID: 0}
@@ -1577,7 +1616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c98851c52325bc741b87285304b52c24, type: 3}
       propertyPath: m_Name
-      value: doornew
+      value: Gate
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c98851c52325bc741b87285304b52c24, type: 3}
       propertyPath: m_TagString
@@ -2830,7 +2869,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f403ce09cced6b419862548307c4c7c, type: 3}
       propertyPath: m_Name
-      value: KeyForDoor
+      value: Key
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1f403ce09cced6b419862548307c4c7c, type: 3}
       propertyPath: m_TagString
@@ -2843,6 +2882,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f403ce09cced6b419862548307c4c7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1479925167}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1f403ce09cced6b419862548307c4c7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479925171}
   m_SourcePrefab: {fileID: 100100000, guid: 1f403ce09cced6b419862548307c4c7c, type: 3}
 --- !u!1 &2030941810
 GameObject:
@@ -2974,8 +3016,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
+  m_Constraints: 116
+  m_CollisionDetection: 1
 --- !u!143 &2115674369
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3014,7 +3056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 2115674368}
-  speed: 0.5
+  speed: 2
 --- !u!4 &2115674371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a83237ae2fcba64ab66e11c22c32167, type: 3}
@@ -3057,7 +3099,7 @@ MonoBehaviour:
   gateAnimator: {fileID: 1623186091}
   interactMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   interactDistance: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
